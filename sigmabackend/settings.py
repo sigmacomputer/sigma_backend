@@ -142,10 +142,3 @@ cloudinary.config(
 
 # CORS_ALLOWED_ORIGINS = config("CORS_ALLOWED_ORIGINS", cast=Csv())
 CORS_ALLOW_ALL_ORIGINS = True
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = config("EMAIL_HOST")  # Replace with your SMTP host
-EMAIL_PORT = config("EMAIL_PORT", cast=int)  # Replace with your SMTP port
-EMAIL_HOST_USER = config("EMAIL_HOST_USER")  # Replace with your email address
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")  # Replace with your email password
-EMAIL_USE_TLS = config("EMAIL_USE_TLS", cast=bool)  # Set to True if your SMTP host requires TLS
