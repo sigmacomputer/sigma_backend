@@ -136,7 +136,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 cloudinary.config( 
   cloud_name = config("CLOUD_NAME"), 
   api_key = config("API_KEY"),
-  api_secret = config("API_SECRET") 
+  api_secret = config("API_SECRET"),
+  api_proxy = "http://proxy.server:3128"
 )
 
 # CORS_ALLOWED_ORIGINS = config("CORS_ALLOWED_ORIGINS", cast=Csv())
