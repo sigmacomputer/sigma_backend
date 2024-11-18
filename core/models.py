@@ -16,6 +16,8 @@ class Site(models.Model):
     name = models.CharField(max_length=100)
     about_us = models.TextField(default="", null=True, blank=True)
     address = models.TextField(default="", null=True, blank=True)
+    header_image = CloudinaryField(folder="site/", null=True, blank=True)
+    header_title = models.CharField(max_length=100, default="", null=True, blank=True)
     phone_number = models.CharField(
         max_length=20,
         default="",
