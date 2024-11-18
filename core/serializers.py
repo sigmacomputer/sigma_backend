@@ -8,7 +8,13 @@ class SiteSerializer(serializers.ModelSerializer):
     team = serializers.SerializerMethodField()
     client = serializers.SerializerMethodField()
     courses = serializers.SerializerMethodField()
-
+    header_image = serializers.SerializerMethodField()
+    
+    def get_header_image(self, obj):
+        if obj.header_image:
+            return obj.header_image.url
+        return ""
+    
     def get_gallery(self, obj):
         return GallerySerializer(Gallery.objects.all(), many=True).data
     
